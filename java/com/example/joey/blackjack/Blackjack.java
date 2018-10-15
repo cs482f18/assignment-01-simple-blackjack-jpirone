@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class Blackjack
 {
+    // Write javadoc to describe your instance variables
     private ArrayList<String> pickedCards;
     private String[] playerCards;
     private String[] dealerCards;

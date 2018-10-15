@@ -8,7 +8,8 @@ import java.util.ArrayList;
 /**
  * Basic Blackjack class to act as a model for the view
  * Allows the model
- *
+ * - ADD @author
+ * - ADD @version 
  */
 public class Blackjack
 {
@@ -158,6 +159,7 @@ public class Blackjack
     public String[] fixAce()
     {
         int index = 0;
+        // use more descriptive variable name than simply s
         for(String s : playerCards)
         {
             if(s != null)
@@ -200,7 +202,7 @@ public class Blackjack
     /**
      * Find the total value of the players
      * hand based off of their cards
-     * @return total value
+     * @return total value *** of all the cards on player's hand ***
      */
     public int getPlayerTotal()
     {
@@ -236,7 +238,7 @@ public class Blackjack
     /**
      * Get the total value of the dealer
      * hand based off of their cards
-     * @return
+     * @return ** write a description of what is being returned **
      */
     public int getDealerTotal()
     {
@@ -329,14 +331,14 @@ public class Blackjack
     /**
      * Give a message to show who the winner is of the hand
      *   Looks at all different situations possible
-     * @param playerTotal players total card summation
-     * @param dealerTotal dealers total card summation
+     * @param playerTotal total value of cards in the Player's hand
+     * @param dealerTotal total value of the cards in Dealer's hand
      * @return message with winner information
      */
     public String whoWon(int playerTotal, int dealerTotal)
     {
 
-        // both players get blackjack
+       // both players get blackjack
         if(isBlackjack(playerCards[0], playerCards[1]) && isBlackjack(dealerCards[0], dealerCards[1]))
         {
             return "Draw: No Winner";
